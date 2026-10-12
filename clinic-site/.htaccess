@@ -1,0 +1,63 @@
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType image/svg+xml .svg
+AddType application/manifest+json .webmanifest
+AddType image/x-icon .ico
+
+# Branded page for missing addresses (paths inside 404.html are root-relative).
+ErrorDocument 404 /404.html
+
+# Canonical HTTPS address; local and preview hosts remain accessible.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(www\.)?umai-clinic\.kz$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.umai-clinic\.kz$ [NC]
+  RewriteRule ^ https://umai-clinic.kz%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 1 day"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/manifest+json
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Browsers remember to open the site over HTTPS only (1 year). Ignored over plain HTTP.
+  # Add "; includeSubDomains" only if every subdomain of umai-clinic.kz works over HTTPS.
+  Header always set Strict-Transport-Security "max-age=31536000"
+
+  # The site needs no camera, microphone, location, payments or USB access.
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+
+  # The site must not be embedded in frames on other domains (clickjacking protection).
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Content Security Policy: only the site's own scripts plus the one inline line
+  # `document.documentElement.classList.add('js');` (allowed by its sha256 hash).
+  # The 2GIS widget is allowed as an iframe for the click-to-load map.
+  # When adding analytics (Yandex Metrika, Google Analytics) or other external scripts,
+  # their domains must be added to script-src / connect-src / img-src, otherwise browsers block them.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://widgets.2gis.com; manifest-src 'self'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com https://web.whatsapp.com; frame-ancestors 'self'; object-src 'none'; upgrade-insecure-requests"
+</IfModule>
+
+# Service files are not part of the public site.
+<FilesMatch "^(README\.md|.*\.cjs)$">
+  Require all denied
+</FilesMatch>

@@ -1,0 +1,16 @@
+{
+  "name": "UMAI CLINIC — медицинский центр в Алматы",
+  "short_name": "UMAI CLINIC",
+  "description": "Запись на приём, направления, цены и контакты медицинского центра UMAI CLINIC.",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "background_color": "#F7F3EA",
+  "theme_color": "#F7F3EA",
+  "icons": [
+    { "src": "/assets/img/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/img/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
