@@ -624,7 +624,7 @@
       </div>
     </section>
 
-    <!-- Prices: edit the numbers in <b class="price-num"> — they are shared by all languages. -->
+    <!-- Prices (clinic price list of 12.10.2026): edit the numbers in <b class="price-num"> — they are shared by all languages. -->
     <section class="section prices" id="prices" aria-labelledby="prices-title">
       <div class="wrap">
         <div class="section-heading">
@@ -632,46 +632,96 @@
             <p class="eyebrow" data-i18n="pricesEyebrow">Стоимость услуг</p>
             <h2 id="prices-title" data-i18n="pricesTitle">Цены на основные услуги</h2>
           </div>
-          <p data-i18n="pricesLead">Указана стартовая стоимость. Итоговая цена зависит от объёма приёма или исследования — администратор назовёт её до записи.</p>
+          <p data-i18n="pricesLead">Цены по прайс-листу клиники на 12 октября 2026 года. «От» — минимальная цена: итог зависит от врача, срока или объёма услуги. Полный прайс-лист — у администратора.</p>
         </div>
-
-        <!-- SAMPLE NOTICE: delete this paragraph after entering the clinic's real prices. -->
-        <p class="price-sample" data-i18n="pricesSample">Образец: цены приведены для примера и будут заменены актуальным прайс-листом клиники.</p>
 
         <div class="price-grid">
           <div class="price-card">
             <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></div>
-            <h3 data-i18n="pricesGroupConsult">Консультации врачей</h3>
+            <h3 data-i18n="plGroupConsult">Консультации врачей</h3>
             <dl class="price-list">
-              <div><dt data-i18n="price_gyn">Приём акушера-гинеколога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">9 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_ther">Приём терапевта</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">7 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_ped">Приём педиатра</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">7 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt><span data-i18n="price_spec">Приём профильного специалиста</span><small data-i18n="price_specNote">уролог, хирург, маммолог, эндокринолог, гастроэнтеролог, невролог, кардиолог</small></dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">9 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_repeat">Повторный приём в течение 14 дней</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">5 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_gyn">Первичный приём акушера-гинеколога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">18 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_ther">Первичный приём терапевта</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">15 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_ped">Первичный приём педиатра</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">18 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_cardio">Первичный приём кардиолога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">20 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_endo">Первичный приём эндокринолога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">15 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_mammo">Первичный приём маммолога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">18 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_surg">Первичный приём хирурга или проктолога</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">15 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_ent">Первичный приём ЛОР-врача</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">12 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_repeat">Повторный приём</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">9 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
             </dl>
           </div>
 
           <div class="price-card">
             <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg></div>
-            <h3 data-i18n="pricesGroupDiag">Ультразвуковая диагностика</h3>
+            <h3 data-i18n="plGroupDiag">УЗИ и функциональная диагностика</h3>
             <dl class="price-list">
-              <div><dt data-i18n="price_uziAbd">УЗИ органов брюшной полости</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">8 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_uziPelvis">УЗИ органов малого таза</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">7 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_uziPreg">УЗИ при беременности</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">9 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_uziThyroid">УЗИ щитовидной железы</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">5 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_uziBreast">УЗИ молочных желёз</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">6 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_uziAbd">УЗИ органов брюшной полости</dt><dd><b class="price-num">14 500 ₸</b></dd></div>
+              <div><dt data-i18n="pl_uziPelvis">УЗИ органов малого таза</dt><dd><b class="price-num">9 300 ₸</b></dd></div>
+              <div><dt data-i18n="pl_uziPreg">УЗИ при беременности</dt><dd><b class="price-num">13 200 ₸</b></dd></div>
+              <div><dt data-i18n="pl_uziThyroid">УЗИ щитовидной железы</dt><dd><b class="price-num">8 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_uziBreast">УЗИ молочных желёз</dt><dd><b class="price-num">9 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_uziKidney">УЗИ почек и надпочечников</dt><dd><b class="price-num">8 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_echo">Эхокардиография (УЗИ сердца)</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">12 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_ecg">ЭКГ с расшифровкой</dt><dd><b class="price-num">8 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_holter">Суточный мониторинг ЭКГ (Холтер) или давления</dt><dd><b class="price-num">24 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_elasto">Эластография</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">10 200 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
             </dl>
           </div>
 
           <div class="price-card">
             <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-lab"/></svg></div>
-            <h3 data-i18n="pricesGroupLab">Анализы и процедуры</h3>
+            <h3 data-i18n="plGroupLab">Анализы</h3>
             <dl class="price-list">
-              <div><dt data-i18n="price_blood">Забор крови из вены</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">1 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_cbc">Общий анализ крови</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">2 500 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_inj">Внутримышечная инъекция</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">1 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_iv">Капельница (без стоимости препарата)</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">4 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
-              <div><dt data-i18n="price_massage">Массаж, сеанс 30 минут</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">6 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_cbc">Общий анализ крови</dt><dd><b class="price-num">4 200 ₸</b></dd></div>
+              <div><dt data-i18n="pl_urine">Общий анализ мочи</dt><dd><b class="price-num">3 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_glucose">Глюкоза крови</dt><dd><b class="price-num">2 400 ₸</b></dd></div>
+              <div><dt data-i18n="pl_hba1c">Гликированный гемоглобин</dt><dd><b class="price-num">8 400 ₸</b></dd></div>
+              <div><dt data-i18n="pl_tsh">ТТГ (гормон щитовидной железы)</dt><dd><b class="price-num">4 800 ₸</b></dd></div>
+              <div><dt data-i18n="pl_ferritin">Ферритин</dt><dd><b class="price-num">6 600 ₸</b></dd></div>
+              <div><dt data-i18n="pl_vitd">Витамин D</dt><dd><b class="price-num">18 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_hcg">ХГЧ (гормон беременности)</dt><dd><b class="price-num">4 800 ₸</b></dd></div>
+              <div><dt data-i18n="pl_smear">Мазок на флору</dt><dd><b class="price-num">3 600 ₸</b></dd></div>
+              <div><dt data-i18n="pl_coag">Коагулограмма</dt><dd><b class="price-num">18 000 ₸</b></dd></div>
+            </dl>
+          </div>
+
+          <div class="price-card">
+            <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-cross"/></svg></div>
+            <h3 data-i18n="plGroupProc">Процедуры</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="pl_im">Внутримышечная или подкожная инъекция</dt><dd><b class="price-num">1 800 ₸</b></dd></div>
+              <div><dt data-i18n="pl_iv">Внутривенная инъекция</dt><dd><b class="price-num">3 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_drip">Капельница (без стоимости препаратов)</dt><dd><b class="price-num">3 600 ₸</b></dd></div>
+              <div><dt data-i18n="pl_dressing">Перевязка</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">2 783 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_stitches">Снятие швов</dt><dd><b class="price-num">2 783 ₸</b></dd></div>
+              <div><dt data-i18n="pl_labHome">Выезд лаборатории на дом (забор анализов)</dt><dd><b class="price-num">10 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_nurseHome">Выезд медсестры на дом</dt><dd><b class="price-num">30 000 ₸</b></dd></div>
+            </dl>
+          </div>
+
+          <div class="price-card">
+            <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></div>
+            <h3 data-i18n="plGroupMassage">Массаж</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="pl_mNeck">Массаж шейно-воротниковой зоны</dt><dd><b class="price-num">7 520 ₸</b></dd></div>
+              <div><dt data-i18n="pl_mBack">Массаж спины</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">9 240 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_mGeneral">Общий массаж (взрослым)</dt><dd><b class="price-num">24 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_mBaby">Массаж детям до 1 года</dt><dd><b class="price-num">8 750 ₸</b></dd></div>
+              <div><dt data-i18n="pl_mBabyCourse">Курс 10 процедур детям до 1 года</dt><dd><b class="price-num">87 846 ₸</b></dd></div>
+              <div><dt data-i18n="pl_lpg">LPG-массаж на всё тело</dt><dd><b class="price-num">23 232 ₸</b></dd></div>
+            </dl>
+          </div>
+
+          <div class="price-card">
+            <div class="guide-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></div>
+            <h3 data-i18n="plGroupPrograms">Программы наблюдения</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="pl_pregnancy">«Патронаж беременности» — ведение беременности</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">495 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_malyutka">«Малютка» — наблюдение ребёнка от 0 до 1 года</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">693 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_malysh">«Малыш» — наблюдение ребёнка от 1 до 2 лет</dt><dd><span data-i18n="pricePrefix">от</span> <b class="price-num">444 000 ₸</b> <span data-i18n="priceSuffix"></span></dd></div>
+              <div><dt data-i18n="pl_birthCourse">Курсы подготовки к родам</dt><dd><b class="price-num">12 000 ₸</b></dd></div>
+              <div><dt data-i18n="pl_pedHome">Вызов педиатра на дом</dt><dd><b class="price-num">38 400 ₸</b></dd></div>
             </dl>
           </div>
         </div>
