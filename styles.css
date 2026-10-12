@@ -1229,7 +1229,7 @@ h3 { font-size: 19px; line-height: 1.4; letter-spacing: -0.02em; }
 }
 .footer-contacts a { color: var(--on-dark); text-decoration: underline; text-decoration-color: #5a4630; text-underline-offset: 3px; }
 .footer-contacts a:hover { color: var(--copper-light); }
-.footer-contacts > div > a { display: inline-block; margin-top: 6px; font-size: 12px; }
+.footer-contacts > div > a { display: block; width: fit-content; margin-top: 6px; font-size: 12px; }
 @media (max-width: 900px) {
   .footer-contacts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
